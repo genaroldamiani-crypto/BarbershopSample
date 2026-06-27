@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Book your sitting at MANE Barber Studio — choose a service, your barber, a day and time. Reserved in under a minute.">
+<meta name="theme-color" content="#1b1815">
+<title>Book — MANE Barber Studio</title>
+<meta property="og:title" content="Book — MANE Barber Studio">
+<meta property="og:description" content="Reserve your sitting in under a minute.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231b1815'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' font-style='italic' fill='%23c8633f' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="brand">MANE</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="barbers.html">Barbers</a>
+    <a href="contact.html">Contact</a>
+    <a href="book.html" class="nav-cta active">Book</a>
+  </div>
+</nav>
+
+<!-- BOOKING -->
+<section class="sec booking" id="book" style="padding-top:150px"><div class="blob b5"></div><div class="blob b6"></div><div class="wrap"><div class="book-wrap reveal">
+  <div class="book-head"><span class="sec-label">— Reserve</span><h2>Book your <em>sitting.</em></h2></div>
+  <div class="dots">
+    <div class="d active" data-s="1"><span class="c">1</span><span class="line"></span></div>
+    <div class="d" data-s="2"><span class="c">2</span><span class="line"></span></div>
+    <div class="d" data-s="3"><span class="c">3</span><span class="line"></span></div>
+    <div class="d" data-s="4"><span class="c">4</span><span class="line"></span></div>
+  </div>
+
+  <div class="panel show" data-p="1">
+    <p class="plabel">What are you in for?</p>
+    <div class="grid-opts">
+      <div class="opt" data-val="The Studio Cut" data-price="60" onclick="pick(this,'service')"><span class="dotmark"></span><h4>Studio Cut</h4><p>$60 · 50 min</p></div>
+      <div class="opt" data-val="Hot Towel Shave" data-price="48" onclick="pick(this,'service')"><span class="dotmark"></span><h4>Towel Shave</h4><p>$48 · 35 min</p></div>
+      <div class="opt" data-val="Beard Architecture" data-price="38" onclick="pick(this,'service')"><span class="dotmark"></span><h4>Beardwork</h4><p>$38 · 30 min</p></div>
+      <div class="opt" data-val="The Full Sitting" data-price="110" onclick="pick(this,'service')"><span class="dotmark"></span><h4>Full Sitting</h4><p>$110 · 90 min</p></div>
+    </div>
+    <div class="nav-btns"><span></span><button onclick="go(2)">Continue</button></div>
+  </div>
+
+  <div class="panel" data-p="2">
+    <p class="plabel">Whose hands?</p>
+    <div class="grid-opts">
+      <div class="opt" data-val="Iris Calder" onclick="pick(this,'barber')"><span class="dotmark"></span><h4>Iris</h4><p>Texture &amp; scissor</p></div>
+      <div class="opt" data-val="Theo Marsh" onclick="pick(this,'barber')"><span class="dotmark"></span><h4>Theo</h4><p>Classic &amp; fades</p></div>
+      <div class="opt" data-val="June Okafor" onclick="pick(this,'barber')"><span class="dotmark"></span><h4>June</h4><p>Shaves &amp; beards</p></div>
+      <div class="opt" data-val="Remy Voss" onclick="pick(this,'barber')"><span class="dotmark"></span><h4>Remy</h4><p>Color &amp; tone</p></div>
+      <div class="opt" data-val="No Preference" onclick="pick(this,'barber')"><span class="dotmark"></span><h4>Whoever's free</h4><p>First available</p></div>
+    </div>
+    <div class="nav-btns"><button class="back" onclick="go(1)">Back</button><button onclick="go(3)">Continue</button></div>
+  </div>
+
+  <div class="panel" data-p="3">
+    <p class="plabel">When works?</p>
+    <p class="pick-hint">Choose a day</p>
+    <div class="day-strip" id="dayStrip"></div>
+    <p class="pick-hint second">Choose a time</p>
+    <div class="times" id="times"></div>
+    <div class="nav-btns"><button class="back" onclick="go(2)">Back</button><button onclick="go(4)">Continue</button></div>
+  </div>
+
+  <div class="panel" data-p="4">
+    <p class="plabel">And finally, you.</p>
+    <div class="field" id="f-name"><label>Your name</label><input id="cName" placeholder="Type it here"><div class="msg">Please enter your name.</div></div>
+    <div class="field" id="f-phone"><label>Phone</label><input id="cPhone" placeholder="(555) 000 0000"><div class="msg">Enter a valid phone number.</div></div>
+    <div class="field" id="f-email"><label>Email</label><input id="cEmail" placeholder="you@email.com"><div class="msg">Enter a valid email.</div></div>
+    <div class="field"><label>Anything we should know? (optional)</label><textarea id="cNotes" rows="2" placeholder="Growing it out, keep some length on top…"></textarea></div>
+    <div class="nav-btns"><button class="back" onclick="go(3)">Back</button><button onclick="confirmBooking()">Confirm sitting</button></div>
+  </div>
+
+  <div class="panel" data-p="5">
+    <div class="confirm">
+      <div class="seal"><div class="ring">✓</div></div>
+      <h3>The chair is <em>yours.</em></h3>
+      <p class="note">We've held it for you — a note is on its way.</p>
+      <div class="summary" id="summary"></div>
+      <div class="nav-btns" style="justify-content:center;margin-top:34px"><button onclick="resetBooking()">Book another</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="appts" id="apptsBox" style="display:none">
+  <h4>Your upcoming sittings</h4>
+  <div id="apptList"></div>
+</div>
+</div></section>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-big">Let's make<br>something <em>sharp.</em></div>
+    <a href="contact.html" class="foot-cta">Have a question?</a>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 MANE Barber Studio · 9 Loom Street · <a href="tel:+15552074410">(555) 207 4410</a></span>
+    <span><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="contact.html">Contact</a> · <a href="contact.html">Gift Cards</a></span>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

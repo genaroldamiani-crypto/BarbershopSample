@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meet the MANE barbers — Iris, Theo, June and Remy. Texture, fades, shaves and color. Book the chair that's right for you.">
+<meta name="theme-color" content="#1b1815">
+<title>Barbers — MANE Barber Studio</title>
+<meta property="og:title" content="Barbers — MANE Barber Studio">
+<meta property="og:description" content="Meet the hands behind the chair — Iris, Theo, June and Remy.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%231b1815'/%3E%3Ctext x='50' y='70' font-family='Georgia,serif' font-size='58' font-style='italic' fill='%23c8633f' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="brand">MANE</a>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="navlinks" id="navlinks">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="barbers.html" class="active">Barbers</a>
+    <a href="contact.html">Contact</a>
+    <a href="book.html" class="nav-cta">Book</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="blob b-a"></div><div class="blob b-b"></div>
+  <div class="inner">
+    <span class="kicker">The Hands</span>
+    <h1>Whose chair <em>is yours.</em></h1>
+    <p class="ph-sub">Four barbers, four specialties. Pick the one that fits — or let us match you with the first available chair.</p>
+  </div>
+</header>
+
+<!-- TEAM -->
+<section class="sec team first-sec"><div class="blob b7"></div><div class="wrap">
+  <div class="team-grid reveal">
+    <div class="member"><div class="face"><span class="mono">I</span></div><div class="info"><h4>Iris Calder</h4><div class="role">Texture &amp; Scissor</div><p class="bio">Reads hair like fabric. The one to see for movement and shape.</p><button class="pick" onclick="quickBook(null,'Iris Calder')">Book Iris</button></div></div>
+    <div class="member"><div class="face"><span class="mono">T</span></div><div class="info"><h4>Theo Marsh</h4><div class="role">Classic &amp; Fades</div><p class="bio">Clean lines, no fuss. A modern fade with a steady, old-school hand.</p><button class="pick" onclick="quickBook(null,'Theo Marsh')">Book Theo</button></div></div>
+    <div class="member"><div class="face"><span class="mono">J</span></div><div class="info"><h4>June Okafor</h4><div class="role">Shaves &amp; Beards</div><p class="bio">The hot-towel ritualist. Leaves a jaw sharper than it arrived.</p><button class="pick" onclick="quickBook(null,'June Okafor')">Book June</button></div></div>
+    <div class="member"><div class="face"><span class="mono">R</span></div><div class="info"><h4>Remy Voss</h4><div class="role">Color &amp; Tone</div><p class="bio">Subtle grey blends and natural color. Nothing ever looks done.</p><button class="pick" onclick="quickBook(null,'Remy Voss')">Book Remy</button></div></div>
+  </div>
+</div></section>
+
+<!-- LOOKBOOK -->
+<section class="sec gallery first-sec" style="padding-top:0"><div class="blob b8"></div><div class="wrap">
+  <div class="reveal"><span class="sec-label">— The Lookbook</span><h2 class="sec-title">Work, off <em>the chair.</em></h2></div>
+  <div class="lookbook reveal">
+    <div class="tile big-tile t1" data-tag="Textured crop"></div>
+    <div class="tile t2" data-tag="Soft taper"></div>
+    <div class="tile t3" data-tag="Hot towel"></div>
+    <div class="tile t4" data-tag="Beardwork"></div>
+    <div class="tile t5" data-tag="Grown-out grace"></div>
+    <div class="tile t6" data-tag="Scissor finish"></div>
+  </div>
+</div></section>
+
+<!-- QUOTES -->
+<section class="sec" style="padding-top:0"><div class="wrap">
+  <div class="reveal"><span class="sec-label">— In Their Words</span><h2 class="sec-title">Said in <em>the chair.</em></h2></div>
+  <div class="quotes reveal">
+    <div class="quote"><div class="mark">”</div><p>It's the only haircut I actually look forward to. They take their time and it shows.</p><div class="who"><b>Marcus L.</b> · regular two years</div></div>
+    <div class="quote"><div class="mark">”</div><p>Iris understood my hair better in one sitting than anyone has in a decade.</p><div class="who"><b>Priya N.</b> · texture client</div></div>
+    <div class="quote"><div class="mark">”</div><p>The whole place feels like an exhale. And the shave is unreal.</p><div class="who"><b>Sam D.</b> · monthly</div></div>
+  </div>
+  <div class="reveal" style="margin-top:50px"><a href="book.html" class="pill">Book your barber</a></div>
+</div></section>
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-big">Let's make<br>something <em>sharp.</em></div>
+    <a href="book.html" class="foot-cta">Reserve a session</a>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 MANE Barber Studio · 9 Loom Street · <a href="tel:+15552074410">(555) 207 4410</a></span>
+    <span><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a> · <a href="contact.html">Contact</a> · <a href="contact.html">Gift Cards</a></span>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
